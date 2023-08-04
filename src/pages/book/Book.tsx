@@ -1,16 +1,16 @@
 import Single from "../../components/single/Single"
-import { singleUser } from "../../data"
-import "./user.scss"
+import { singleBook } from "../../data"
+import "./book.scss"
 
-const User = () => {
+const Book = () => {
 
   //Fetch data and send to Single Component
   
   return (
     <div className="user">
-      <Single {...singleUser}/>
+      <Single {...singleBook}/>
     </div>
   )
 }
 
-export default User
+export default Book

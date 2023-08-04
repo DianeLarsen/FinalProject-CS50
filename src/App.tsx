@@ -1,13 +1,22 @@
 import Home from "./pages/home/Home";
 
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Users from "./pages/users/Users";
-import Products from "./pages/products/Products";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
-import Menu from "./components/menu/Menu";
+// import Menu from "./components/menu/Menu";
 import Login from "./pages/login/Login";
 import "./styles/global.scss"
+import Projects from "./pages/projects/Projects";
+import Books from "./pages/books/Books";
+import {
+  QueryClient,
+  QueryClientProvider,
+} from "@tanstack/react-query";
+import Book from "./pages/book/Book";
+import Project from "./pages/project/Project";
+
+
+const queryClient = new QueryClient();
 
 function App() {
   const Layout = () => {
@@ -15,11 +24,13 @@ function App() {
       <div className="main">
         <Navbar />
         <div className="container">
-          <div className="menuContainer">
+          {/* <div className="menuContainer">
             <Menu />
-          </div>
+          </div> */}
           <div className="contentContainer">
-            <Outlet />
+          <QueryClientProvider client={queryClient}>
+              <Outlet />
+            </QueryClientProvider>
           </div>
         </div>
         <Footer />
@@ -37,12 +48,20 @@ function App() {
           element: <Home />,
         },
         {
-          path: "/users",
-          element: <Users />,
+          path: "/books",
+          element: <Books />,
         },
         {
-          path: "/products",
-          element: <Products />,
+          path: "/projects",
+          element: <Projects />,
+        },
+        {
+          path: "/book/:id",
+          element: <Book />,
+        },
+        {
+          path: "/project/:id",
+          element: <Project />,
         },
       ],
     },

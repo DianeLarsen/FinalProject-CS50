@@ -4,7 +4,9 @@ import {
   GridToolbar,
 } from "@mui/x-data-grid";
 import "./dataTable.scss";
+
 import { Link } from "react-router-dom";
+
 // import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 type Props = {
@@ -15,23 +17,17 @@ type Props = {
 
 const DataTable = (props: Props) => {
 
-  // TEST THE API
+  
 
-  // const queryClient = useQueryClient();
-  // // const mutation = useMutation({
-  // //   mutationFn: (id: number) => {
-  // //     return fetch(`http://localhost:8800/api/${props.slug}/${id}`, {
-  // //       method: "delete",
-  // //     });
-  // //   },
-  // //   onSuccess: ()=>{
-  // //     queryClient.invalidateQueries([`all${props.slug}`]);
-  // //   }
-  // // });
+  // const apiKey = "AIzaSyAxpEQF45eCDCToCIE9coTgEqiSuLiH5dE";
+  //     let url = `https://www.googleapis.com/books/v1/volumes?q=ISBN:${stuff.ISBN}&title=${stuff.title}&maxResults=5&key= ${apiKey}`;
+  //     fetch(url)
+  //       .then((res) => res.json())
+
+
 
   const handleDelete = (id: number) => {
-    //delete the item
-    // mutation.mutate(id)
+    console.log(id)
   };
 
   const actionColumn: GridColDef = {

@@ -1,9 +1,9 @@
 import { useState } from "react";
-import "./products.scss";
+import "./projects.scss";
 import DataTable from "../../components/dataTable/DataTable";
 import Add from "../../components/add/Add";
 import { GridColDef } from "@mui/x-data-grid";
-import { products } from "../../data";
+import { projects } from "../../data";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 90 },
@@ -53,7 +53,7 @@ const columns: GridColDef[] = [
   },
 ];
 
-const Products = () => {
+const Projects = () => {
   const [open, setOpen] = useState(false);
 
   // TEST THE API
@@ -69,10 +69,10 @@ const Products = () => {
   return (
     <div className="products">
       <div className="info">
-        <h1>Products</h1>
-        <button onClick={() => setOpen(true)}>Add New Products</button>
+        <h1>Projects</h1>
+        <button onClick={() => setOpen(true)}>Add New Projects</button>
       </div>
-      <DataTable slug="products" columns={columns} rows={products} />
+      <DataTable slug="projects" columns={columns} rows={projects} />
       {/* TEST THE API */}
 
       {/* {isLoading ? (
@@ -80,9 +80,9 @@ const Products = () => {
       ) : (
         <DataTable slug="products" columns={columns} rows={data} />
       )} */}
-      {open && <Add slug="product" columns={columns} setOpen={setOpen} />}
+      {open && <Add slug="project" columns={columns} setOpen={setOpen} />}
     </div>
   );
 };
 
-export default Products;
+export default Projects;

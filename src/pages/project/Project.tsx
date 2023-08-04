@@ -1,15 +1,15 @@
 import Single from "../../components/single/Single"
-import { singleProduct } from "../../data"
-import "./product.scss"
+import { singleProject } from "../../data"
+import "./project.scss"
 
-const Product = () => {
+const Project = () => {
 
   //Fetch data and send to Single Component
   return (
     <div className="product">
-       <Single {...singleProduct}/>
+       <Single {...singleProject}/>
     </div>
   )
 }
 
-export default Product
+export default Project

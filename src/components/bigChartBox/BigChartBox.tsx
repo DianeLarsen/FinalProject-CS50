@@ -11,52 +11,87 @@ import "./bigChartBox.scss";
 const data = [
   {
     name: "Sun",
-    books: 4000,
-    clothes: 2400,
-    electronic: 2400,
+    reading: 2,
+    working: 0,
+    schooling: 0,
+    developing: 0,
+    sleeping: 8,
+    playing: 8,
+    familying: 5,
+    driving: 1,
   },
   {
     name: "Mon",
-    books: 3000,
-    clothes: 1398,
-    electronic: 2210,
+    reading: 0,
+    working: 6,
+    schooling: 2,
+    developing: 4,
+    sleeping: 7,
+    playing: 1,
+    familying: 2,
+    driving: 2,
   },
   {
     name: "Tue",
-    books: 2000,
-    clothes: 9800,
-    electronic: 2290,
+    reading: 0,
+    working: 6,
+    schooling: 2,
+    developing: 4,
+    sleeping: 7,
+    playing: 1,
+    familying: 2,
+    driving: 2,
   },
   {
     name: "Wed",
-    books: 2780,
-    clothes: 3908,
-    electronic: 2000,
+    reading: 0,
+    working: 6,
+    schooling: 2,
+    developing: 4,
+    sleeping: 7,
+    playing: 1,
+    familying: 2,
+    driving: 2,
   },
   {
     name: "Thu",
-    books: 1890,
-    clothes: 4800,
-    electronic: 2181,
+    reading: 0,
+    working: 6,
+    schooling: 2,
+    developing: 2,
+    sleeping: 7,
+    playing: 1,
+    familying: 2,
+    driving: 2,
   },
   {
     name: "Fri",
-    books: 2390,
-    clothes: 3800,
-    electronic: 2500,
+    reading: 0,
+    working: 6,
+    schooling: 2,
+    developing: 4,
+    sleeping: 6,
+    playing: 0,
+    familying: 3,
+    driving: 2,
   },
   {
     name: "Sat",
-    books: 3490,
-    clothes: 4300,
-    electronic: 2100,
+    reading: 2,
+    working: 0,
+    schooling: 0,
+    developing: 0,
+    sleeping: 8,
+    playing: 8,
+    familying: 4,
+    driving: 2,
   },
 ];
 
 const BigChartBox = () => {
   return (
     <div className="bigChartBox">
-      <h1>Revenue Analytics</h1>
+      <h1>Time Analytics</h1>
       <div className="chart">
         <ResponsiveContainer width="99%" height="100%">
           <AreaChart
@@ -73,24 +108,59 @@ const BigChartBox = () => {
             <Tooltip />
             <Area
               type="monotone"
-              dataKey="electronic"
+              dataKey="reading"
               stackId="1"
-              stroke="#8884d8"
-              fill="#8884d8"
+              stroke="#c780e8"
+              fill="#c780e8"
             />
             <Area
               type="monotone"
-              dataKey="clothes"
+              dataKey="working"
               stackId="1"
-              stroke="#82ca9d"
-              fill="#82ca9d"
+              stroke="#9d94ff"
+              fill="#9d94ff"
             />
             <Area
               type="monotone"
-              dataKey="books"
+              dataKey="schooling"
               stackId="1"
-              stroke="#ffc658"
-              fill="#ffc658"
+              stroke="#59adf6"
+              fill="#59adf6"
+            />  
+            <Area
+            type="monotone"
+            dataKey="developing"
+            stackId="1"
+            stroke="#08cad1"
+            fill="#08cad1"
+          />
+            <Area
+              type="monotone"
+              dataKey="sleeping"
+              stackId="1"
+              stroke="#42d6a4"
+              fill="#42d6a4"
+            />
+              <Area
+              type="monotone"
+              dataKey="playing"
+              stackId="1"
+              stroke="#f8f38d"
+              fill="#f8f38d"
+            />
+              <Area
+              type="monotone"
+              dataKey="familying"
+              stackId="1"
+              stroke="#ffb480"
+              fill="#ffb480"
+            />
+              <Area
+              type="monotone"
+              dataKey="driving"
+              stackId="1"
+              stroke="#ff6961"
+              fill="#ff6961"
             />
           </AreaChart>
         </ResponsiveContainer>
